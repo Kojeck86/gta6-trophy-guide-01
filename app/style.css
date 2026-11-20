@@ -1,0 +1,140 @@
+/* Leonida Trophy Guide — original styling, no images, no external fonts. */
+:root {
+  --bg: #150f2e;
+  --bg2: #1e1540;
+  --card: #241a4d;
+  --card2: #2c2160;
+  --ink: #f4efff;
+  --muted: #b9aede;
+  --line: #4a3a86;
+  --pink: #ff5da2;
+  --orange: #ff9a3d;
+  --gold: #ffd166;
+  --silver: #cfd6e4;
+  --bronze: #e0a075;
+  --platinum: #8fe3ff;
+  --good: #5ee6a8;
+  --danger: #ff6b6b;
+  --radius: 12px;
+}
+* { box-sizing: border-box; }
+html { color-scheme: dark; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.hero {
+  background: linear-gradient(160deg, #3b1d6e 0%, #7a2a7d 42%, #c94f7c 68%, #ff9a3d 100%);
+  padding: 40px 20px 28px;
+  border-bottom: 4px solid var(--pink);
+}
+.hero-inner { max-width: 1060px; margin: 0 auto; }
+.eyebrow { margin: 0 0 6px; text-transform: uppercase; letter-spacing: .14em; font-size: 12px; color: #ffe3f0; }
+h1 { margin: 0; font-size: clamp(32px, 6vw, 52px); line-height: 1.05; letter-spacing: -.01em; }
+.tagline { margin: 10px 0 0; font-size: 18px; color: #fff3e2; max-width: 720px; }
+.progress-wrap { margin-top: 22px; max-width: 720px; }
+.progress-bar { height: 14px; border-radius: 999px; background: rgba(0,0,0,.35); overflow: hidden; }
+.progress-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--pink), var(--orange), var(--gold)); transition: width .3s ease; }
+.progress-text { margin: 8px 0 2px; font-weight: 700; }
+.grade-line { margin: 0; color: #ffe9f3; font-size: 14px; }
+main { max-width: 1060px; margin: 0 auto; padding: 0 20px 40px; }
+section { margin-top: 28px; }
+h2 { font-size: 24px; margin: 0 0 12px; }
+h2 .roadmap-time { font-size: 14px; font-weight: 400; color: var(--muted); }
+.section-note, .roadmap-note { color: var(--muted); }
+.controls { background: var(--bg2); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; }
+.control-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.control-row input[type="search"] {
+  flex: 1 1 280px; min-width: 220px; padding: 10px 12px; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--card); color: var(--ink); font: inherit;
+}
+.control-row select {
+  padding: 10px; border-radius: 8px; border: 1px solid var(--line);
+  background: var(--card); color: var(--ink); font: inherit;
+}
+.chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.chip {
+  padding: 7px 13px; border-radius: 999px; border: 1px solid var(--line);
+  background: transparent; color: var(--ink); font: inherit; font-size: 14px; cursor: pointer;
+}
+.chip:hover { border-color: var(--pink); }
+.chip.active { background: var(--pink); border-color: var(--pink); color: #fff; font-weight: 700; }
+.toggle-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 14px; }
+.toggle { display: flex; align-items: center; gap: 7px; font-size: 14px; cursor: pointer; }
+.toggle input { width: 17px; height: 17px; accent-color: var(--pink); }
+.spacer { flex: 1; }
+.btn {
+  padding: 8px 14px; border-radius: 8px; border: 1px solid var(--line);
+  background: var(--card); color: var(--ink); font: inherit; font-size: 14px; cursor: pointer;
+}
+.btn:hover { border-color: var(--pink); }
+.btn.danger { border-color: var(--danger); color: var(--danger); }
+.hint { margin: 12px 0 0; color: var(--muted); font-size: 14px; }
+.stages { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.stages li {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 14px 16px;
+}
+.stages h3 { margin: 0 0 4px; font-size: 17px; }
+.stages h3 .stage-time { color: var(--muted); font-weight: 400; font-size: 13px; }
+.stages p { margin: 0; color: var(--muted); font-size: 14px; }
+.stages .stage-count { margin-top: 8px; font-size: 13px; color: var(--gold); font-weight: 700; }
+.trophy-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.trophy {
+  display: grid; grid-template-columns: 34px 1fr auto; gap: 12px; align-items: start;
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 13px 14px; cursor: pointer;
+}
+.trophy:hover { border-color: var(--pink); }
+.trophy.earned { border-color: var(--good); background: var(--card2); }
+.trophy input[type="checkbox"] { width: 22px; height: 22px; margin-top: 3px; accent-color: var(--good); cursor: pointer; }
+.trophy-name { font-weight: 700; font-size: 17px; }
+.trophy-name .hidden-tag { color: var(--muted); font-weight: 400; font-size: 13px; }
+.trophy-desc { color: var(--muted); font-size: 14px; margin-top: 2px; }
+.trophy-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 7px; }
+.tag {
+  font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px;
+  background: rgba(255,255,255,.09); color: var(--muted); text-transform: uppercase; letter-spacing: .04em;
+}
+.tag.missable { background: #5c1f1f; color: #ffb3b3; }
+.tag.story { background: #3a2a6e; color: #d9ccff; }
+.tag.count { background: transparent; border: 1px solid var(--line); color: var(--ink); text-transform: none; letter-spacing: 0; }
+.grade-badge { font-weight: 800; font-size: 13px; padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
+.grade-Platinum { background: #123; color: var(--platinum); border: 1px solid var(--platinum); }
+.grade-Gold { background: #3a2f10; color: var(--gold); border: 1px solid var(--gold); }
+.grade-Silver { background: #2a2f3a; color: var(--silver); border: 1px solid var(--silver); }
+.grade-Bronze { background: #3a2415; color: var(--bronze); border: 1px solid var(--bronze); }
+.counter { display: flex; align-items: center; gap: 6px; margin-top: 8px; font-size: 14px; }
+.counter button {
+  width: 28px; height: 28px; border-radius: 7px; border: 1px solid var(--line);
+  background: var(--bg2); color: var(--ink); font-size: 17px; cursor: pointer;
+}
+.counter button:hover { border-color: var(--pink); }
+.counter .count-now { min-width: 74px; text-align: center; font-weight: 700; }
+.detail { position: sticky; bottom: 16px; }
+.detail-card {
+  position: relative; background: #2e2266; border: 2px solid var(--pink);
+  border-radius: var(--radius); padding: 20px 22px; box-shadow: 0 12px 40px rgba(0,0,0,.55);
+}
+.detail-close {
+  position: absolute; top: 8px; right: 12px; background: none; border: none;
+  color: var(--ink); font-size: 30px; cursor: pointer; line-height: 1;
+}
+.detail-grade { margin: 0 0 4px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; font-size: 13px; color: var(--gold); }
+.detail h3 { margin: 0 0 4px; font-size: 24px; }
+.detail-desc { margin: 0; color: var(--muted); font-style: italic; }
+.detail-meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 4px; }
+.detail h4 { margin: 14px 0 4px; font-size: 15px; text-transform: uppercase; letter-spacing: .08em; color: var(--pink); }
+.detail-guide { margin: 0; }
+.detail-sources { margin: 0; padding-left: 20px; color: var(--muted); font-size: 14px; }
+.sources ul { color: var(--muted); }
+.disclaimer { font-size: 13px; color: var(--muted); }
+footer { max-width: 1060px; margin: 0 auto; padding: 0 20px 28px; color: var(--muted); font-size: 14px; }
+.empty { color: var(--muted); padding: 18px; text-align: center; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+@media (max-width: 640px) {
+  .trophy { grid-template-columns: 30px 1fr; }
+  .grade-badge { grid-column: 2; justify-self: start; }
+}

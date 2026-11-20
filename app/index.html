@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI Platinum Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: checklist, roadmap, missable flags and cited guides.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; works offline</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="tagline">Every one of the 55 trophies — tracker, roadmap and cited guides for the road to <strong>Vice Got a Price!</strong></p>
+    <div class="progress-wrap" id="progressWrap">
+      <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+      <p class="progress-text" id="progressText">0 of 55 earned &middot; 0%</p>
+      <p class="grade-line" id="gradeLine"></p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="controls" aria-label="Tracker controls">
+    <div class="control-row">
+      <input type="search" id="searchBox" placeholder="Search a trophy or guide…" aria-label="Search trophies">
+      <select id="gradeFilter" aria-label="Filter by grade">
+        <option value="">All grades</option>
+        <option>Platinum</option>
+        <option>Gold</option>
+        <option>Silver</option>
+        <option>Bronze</option>
+      </select>
+      <select id="sortSelect" aria-label="Sort trophies">
+        <option value="roadmap">Sort: roadmap order</option>
+        <option value="grade">Sort: grade, then name</option>
+        <option value="name">Sort: name A–Z</option>
+      </select>
+    </div>
+    <div class="chip-row" id="kindChips" role="group" aria-label="Filter by kind">
+      <button type="button" class="chip active" data-kind="">All 55</button>
+      <button type="button" class="chip" data-kind="story">Story</button>
+      <button type="button" class="chip" data-kind="missable">Missable</button>
+      <button type="button" class="chip" data-kind="collectible">Collectibles</button>
+      <button type="button" class="chip" data-kind="activity">Activities</button>
+      <button type="button" class="chip" data-kind="crime">Crime</button>
+      <button type="button" class="chip" data-kind="misc">Odd ones</button>
+    </div>
+    <div class="toggle-row">
+      <label class="toggle"><input type="checkbox" id="spoilerToggle"> <span>Spoiler-safe: hide story trophies until earned</span></label>
+      <label class="toggle"><input type="checkbox" id="hideEarnedToggle"> <span>Hide earned</span></label>
+      <span class="spacer"></span>
+      <button type="button" id="exportBtn" class="btn">Export progress</button>
+      <button type="button" id="importBtn" class="btn">Import progress</button>
+      <input type="file" id="importFile" accept=".json,application/json" hidden>
+      <button type="button" id="resetBtn" class="btn danger">Reset</button>
+    </div>
+    <p class="hint" id="resultCount" aria-live="polite"></p>
+  </section>
+
+  <section class="roadmap" id="roadmap" aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the Platinum <span class="roadmap-time">~200 hours &middot; 1 playthrough &middot; no online trophies</span></h2>
+    <ol class="stages" id="stageList"></ol>
+    <p class="roadmap-note"><strong>Watch out:</strong> there is no mission replay and no New Game+. Keep a manual save at the start and end of every chapter. Cheats disable trophies — use them only when you are done.</p>
+  </section>
+
+  <section class="tracker" aria-label="Trophy checklist">
+    <h2>Trophy checklist</h2>
+    <p class="section-note">Tick a trophy when it pops. Counts are tracked where PlayStation tracks them. Click any row to open its guide and sources.</p>
+    <ul class="trophy-list" id="trophyList"></ul>
+  </section>
+
+  <section class="detail" id="detail" aria-label="Trophy guide" hidden>
+    <div class="detail-card">
+      <button type="button" class="detail-close" id="detailClose" aria-label="Close guide">&times;</button>
+      <p class="detail-grade" id="detailGrade"></p>
+      <h3 id="detailName"></h3>
+      <p class="detail-desc" id="detailDesc"></p>
+      <div class="detail-meta" id="detailMeta"></div>
+      <h4>Guide</h4>
+      <p class="detail-guide" id="detailGuide"></p>
+      <h4>Sources</h4>
+      <ul class="detail-sources" id="detailSources"></ul>
+    </div>
+  </section>
+
+  <section class="sources" aria-label="Sources and method">
+    <h2>Sources &amp; method</h2>
+    <p>Trophy names, descriptions and grades are shown as PlayStation publishes them, as collected by PSNProfiles and Exophase and cross-checked across the guides below (checked 20 November 2026). Every guide on this page is written for this entry in the entrant&rsquo;s own words; the guides are cited, never copied. The one possibly missable trophy — <strong>Positive Mental Attitude</strong> — is flagged from the official descriptions and the cited roadmaps.</p>
+    <ul>
+      <li>KeenGamer — GTA 6 Trophy Guide &amp; Platinum Roadmap – All 55 Trophies</li>
+      <li>GTA Spotter — GTA VI trophies and achievements: the full official list</li>
+      <li>GamesFuze — GTA 6 Trophy List: All 55 Trophies &amp; Achievements</li>
+      <li>PowerPyx GTA 6 trophy roadmap, via KeenGamer and GTA Spotter</li>
+      <li>PSNProfiles and Exophase trophy listings, via the guides above</li>
+    </ul>
+    <p class="disclaimer">An unofficial fan guide. Grand Theft Auto and GTA are trademarks of Take-Two Interactive; this page uses no Rockstar artwork, logos or game screenshots. All progress is stored only in your browser (localStorage); nothing leaves your machine.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Trophy Guide — an offline, open-source GTA VI trophy tracker. MIT licensed.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
